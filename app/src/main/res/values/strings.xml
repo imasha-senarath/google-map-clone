@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Google Map Clone</string>
+    <string name="google_maps_API_key">api-key</string>
 </resources>
