@@ -21,6 +21,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -123,7 +124,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 return;
             }
             mMap.setMyLocationEnabled(true);
-            mMap.getUiSettings().setMyLocationButtonEnabled(false);
+            //mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+            LatLng weeraketiya = new LatLng(6.1476, 80.7634);
+            googleMap.addMarker(new MarkerOptions()
+                    .position(weeraketiya)
+                    .title("Weeraketiya"));
+
+            LatLng tangalle = new LatLng(6.0243, 80.7941);
+            googleMap.addMarker(new MarkerOptions()
+                    .position(tangalle)
+                    .title("Tangalle"));
         }
     }
 }
